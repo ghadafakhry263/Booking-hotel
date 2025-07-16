@@ -2,6 +2,7 @@ import { NavLink } from "react-bootstrap"
 import Navbar from "./Component/Navbar"
 import { Route, Routes, useLocation } from "react-router-dom"
 import Home from "./Pages/Home"
+import Footer from "./Component/Footer"
 
 
 function App() {
@@ -16,6 +17,7 @@ const isOwnerPath=useLocation().pathname.includes("owner")
       <Route path="/" element={<Home />} />
     </Routes>
   </div>
+  <Footer></Footer>
     </>
   )
 }

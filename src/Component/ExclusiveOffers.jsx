@@ -5,7 +5,7 @@ const ExclusiveOffers = () => {
   return (
     <>
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row justify-between pt-20 pb-20 px-20">
+      <div className="flex flex-col md:flex-row justify-between pt-10 pb-20 px-20">
         <div className="flex flex-col justify-center items-start">
           <h1 className="font-playfair text-4xl font-bold text-gray-800 mb-6 pt-10">Exclusive Offers</h1>
           <p className="max-w-2xl text-gray-500 pb-5">
