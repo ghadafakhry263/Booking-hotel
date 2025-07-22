@@ -14,7 +14,7 @@ const FeatureDestination = () => {
                 <HotelCard key={room._id} room={room} index={index}/>
             ))}
         </div>
-        <button onClick={()=>{navigate("/rooms")}} className='px-16 py-2.5 mt-20 mb-10 bg-white  text-black border border-gray-300 rounded-full hover:bg-gray-300 transition-all duration-300'>View All Destinations</button>
+        <button onClick={() => { navigate("/rooms"); scrollTo(0, 0); }} className='px-16 py-2.5 mt-20 mb-10 bg-white  text-black border border-gray-300 rounded-full hover:bg-gray-300 transition-all duration-300'>View All Destinations</button>
     </div>
   )
 }

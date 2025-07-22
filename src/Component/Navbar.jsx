@@ -37,20 +37,21 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
- useEffect(() => {
-
-  if(location.pathname === "/") {
-    setIsScrolled(false);
-  }else{
-    setIsScrolled(true);
-  }
-    setIsScrolled((prev) => (location.pathname !== "/" ? true : prev));
-    const handleScroll = () => {
+useEffect(() => {
+  const handleScroll = () => {
+    if (location.pathname === "/") {
       setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [location.pathname]);
+    } else {
+      setIsScrolled(true); // في أي صفحة غير "/"، خليه دايمًا ظاهر
+    }
+  };
+
+  handleScroll(); // علشان أول ما يدخل الصفحة يتحقق من الحالة فورًا
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [location.pathname]);
+
 
   return (
     <nav
@@ -83,13 +84,13 @@ const Navbar = () => {
             />
           </a>
         ))}
-        <button
+        {/* <button
           className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${
             isScrolled ? "text-black" : "text-white"
           } transition-all`}
         >
           Dashboard
-        </button>
+        </button> */}
       </div>
 
       {/* Desktop Right */}
@@ -114,7 +115,7 @@ const Navbar = () => {
         ) : (
           <button
             onClick={openSignIn}
-            className="px-8 py-2.5 rounded-full ml-4 transition-all duration-500 "
+            className="px-8 py-2.5 rounded-full  bg-black  text-white ml-4 transition-all duration-500 "
           >
             Login
           </button>
