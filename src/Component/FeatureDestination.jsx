@@ -6,7 +6,7 @@ const FeatureDestination = () => {
   const navigate = useNavigate();
   return (
   
-    <div className='flex flex-col items-center bg-gray-50'>
+    <div className='flex flex-col items-center md:mt-1 mt-55 bg-gray-50'>
         <h1 className='font-playfair text-4xl font-bold text-gray-800 mb-6 pt-10'>Featured Destinations</h1>
         <p className='max-w-2xl text-gray-500 text-center pb-5'>Discover our handpicked selection of exceptional properties around the world, offering unparalleled luxury and unforgettable experiences</p>
         <div className='flex flex-wrap gap-6 justify-center items-center pt-10'>

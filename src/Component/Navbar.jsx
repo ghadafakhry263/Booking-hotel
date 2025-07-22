@@ -63,7 +63,7 @@ useEffect(() => {
     >
       {/* Logo */}
       <Link to="/">
-        <img className={`${isScrolled?"invert":""} md:mt-35 mt-38`}src={assets.logo} />
+        <img className={`${isScrolled?"invert":""} `}src={assets.logo} />
       </Link>
 
       {/* Desktop Nav */}
